@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: rgb(177, 51, 72);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        img {
+            max-width: 50%;
+            max-height: 50%;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        form {
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Updates</title>
+</head>
+
+<body>
+    <h1>Farmer Updates</h1>
+
+
+    <img src="
+        data:image/png;base64,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"
+        alt=" Harvest Hub Logo">
+
+    <p>
+        Farmers, use the form below to provide updates about seed quality and nutrient values to your consumers.
+    </p>
+
+    <form>
+        <label for="seedQuality">Seed Quality:</label>
+        <input type="text" id="seedQuality" name="seedQuality" required>
+
+        <label for="nutrientValues">Nutrient Values:</label>
+        <textarea id="nutrientValues" name="nutrientValues" rows="4" required></textarea>
+
+        <button type="button" onclick="submitUpdates()">Submit Updates</button>
+    </form>
+
+    <script>
+        function submitUpdates() {
+            // Implement your form submission logic here
+            alert('Updates submitted!');
+        }
+    </script>
+</body>
+
+</html>

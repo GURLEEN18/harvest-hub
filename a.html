@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #harvest-form {
+            background: url(data:image/jpeg;base64,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) center/cover no-repeat;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            max-width: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #96dbf9;
+            /* Fallback background color */
+        }
+
+
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 24px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        button {
+            background-color: #78d77b;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2e9a39;
+        }
+
+        #output {
+            margin-top: 24px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f5f5f5;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .submit-button {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3fca44;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #2e9a39;
+        }
+
+        .icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin-right: 8px;
+        }
+
+        .input-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .input-container input {
+            padding-left: 48px;
+        }
+
+        .input-container .icon {
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+        }
+
+        .input-container:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: transform 0.3s ease;
+            transform-origin: left;
+            transform: scaleX(0);
+        }
+
+        .input-container:focus-within:before {
+            transform: scaleX(1);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #output.fade-in {
+            animation: fadeIn 1s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="harvest-form">
+        <h2>Harvest Hub</h2>
+        <form id="harvest-hub-form">
+            <div class="input-container">
+                <div class="icon">
+
+                </div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-container">
+                <div class="icon"></div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-container">
+                <div class="icon"></div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="input-container">
+                <div class="icon"></div>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+        </form>
+        <div id="output"></div>
+    </div>
+    <div class="submit-button"><a href="h.html" class="fancybox" data-fancybox data-type="ajax">Submit and
+            Continue</a></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <script>
+        $(document).ready(function () { $('.fancybox').fancybox(); });
+    </script>
+    <script>
+        const form = document.getElementById('harvest-hub-form');
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const location = formData.get('location');
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = `
+                    <p>Name: ${name}</p>
+                    <p>Email: ${email}</p>
+                    <p>Phone: ${phone}</p>
+                    <p>Location: ${location}</p>
+                `;
+            outputDiv.classList.add('fade-in');
+            setTimeout(() => {
+                outputDiv.classList.remove('fade-in');
+                outputDiv.innerHTML = ''; // Clear the output after 3 seconds
+            }, 3000);
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>
