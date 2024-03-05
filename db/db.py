@@ -4,8 +4,6 @@ from pymongo.server_api import ServerApi
 
 
 ### MonGo DB Stuff
-db_user = getenv("DBUSER")
-db_pass = getenv("DBPASS")  
-uri = "mongodb+srv://"+str(db_user)+":"+str(db_pass)+"@cluster0.ebzle64.mongodb.net/"
+uri = getenv("MONGO_URI")
 client = MongoClient(uri, server_api=ServerApi('1'))
 db = client["harvestHub"]

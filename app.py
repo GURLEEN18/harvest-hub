@@ -44,7 +44,7 @@ def signup():
     
     return rt('signup.html' )
 
-@app.route('/verify')
+@app.route('/verify' ,methods=['GET', 'POST'])
 def verify():
     if request.method == 'POST':
         name = request.form.get('name')
