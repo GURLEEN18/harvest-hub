@@ -13,27 +13,27 @@
             <div
                class="relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-transparent  py-16 px-10 text-center sm:px-12 md:px-[60px]">
               
-               <form action="/verify" method="POST">
+               <form action="#" method="POST">
+                  {{ form.hidden_tag() }}
+
                 <div class="mb-6">
-                    <input type="text" name="name" placeholder="Name"
-                       class="w-full px-5 py-3 text-base bg-transparent border rounded-md outline-none border-stroke text-body-color  focus:border-primary focus-visible:shadow-none" />
+                     {{form.name(type="name", id="name", class="w-full px-5 py-3 text-base bg-transparent border rounded-md outline-none border-stroke text-body-color  focus:border-primary focus-visible:shadow-none", placeholder="Name",)}}
                 </div>
 
                   <div class="mb-6">
-                     <input type="text" name="email" placeholder="Email"
-                        class="w-full px-5 py-3 text-base bg-transparent border rounded-md outline-none border-stroke text-body-color  focus:border-primary focus-visible:shadow-none" />
+                     {{form.email(type="email",id="email",class="w-full px-5 py-3 text-base bg-transparent border rounded-md outline-none border-stroke text-body-color  focus:border-primary focus-visible:shadow-none",placeholder="Email")}}
+                  </div>
+                  
+                  <div class="mb-6">
+                       {{form.password(type="password", id="password", placeholder="Password",  class="w-full px-5 py-3 text-base bg-transparent border rounded-md outline-none border-stroke text-body-color  focus:border-primary focus-visible:shadow-none")}}
                   </div>
                   <div class="mb-6">
-                     <input type="password" name="password" placeholder="Password"
-                        class="w-full px-5 py-3 text-base bg-transparent border rounded-md outline-none border-stroke text-body-color  focus:border-primary focus-visible:shadow-none" />
-                  </div>
-                  <div class="mb-6">
-                    <input type="password" name="Confirm_password" placeholder="Confirm Password"
-                       class="w-full px-5 py-3 text-base bg-transparent border rounded-md outline-none border-stroke text-body-color  focus:border-primary focus-visible:shadow-none" />
-                 </div>
+                     {{form.confirmPassword( type="password", id="confirm-password" ,
+                     placeholder="Confirm Password", class="w-full px-5 py-3 text-base bg-transparent border rounded-md outline-none border-stroke text-body-color  focus:border-primary focus-visible:shadow-none")}}
+               </div>
                   <div class="mb-10">
-                     <input type="submit" value="Sign In"
-                        class="w-full px-5 py-3 text-base font-medium text-black transition border rounded-md cursor-pointer border-primary bg-purple-100 hover:bg-opacity-90" />
+                     {{form.submit(type="submit", class="w-full px-5 py-3 text-base font-medium text-black transition border rounded-md cursor-pointer border-primary bg-purple-100 hover:bg-opacity-90")}}
+    
                   </div>
                </form>
 

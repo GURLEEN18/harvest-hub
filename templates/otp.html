@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}Login{% endblock title %}
+{% block head %}{% endblock head %}
+
+
+{% block body %}
+
+<!-- ====== Forms Section Start -->
+<section class=" bg-transparent lg:py-[120px]">
+   <div class="container mx-auto">
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full px-4">
+            <div
+               class="relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-transparent  py-16 px-10 text-center sm:px-12 md:px-[60px]">
+              
+               <form action={{url_for("otp")}} method="POST">
+                  {{ form.csrf_token }}
+
+                  
+                  <div class="mb-6">
+                        {{form.otp(type="text",id="otp", class="w-full px-5 py-3 text-base bg-transparent border rounded-md outline-none border-stroke text-body-color  focus:border-primary focus-visible:shadow-none",placeholder="Enter OTP")}}
+                  </div>
+                 
+                  <div class="mb-10">
+
+                        {{form.submit(type="submit", class="w-full px-5 py-3 text-base font-medium text-black transition border rounded-md cursor-pointer border-primary bg-purple-100 hover:bg-opacity-90")}}
+                  </div>
+               </form>
+
+              
+               <div>
+
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- ====== Forms Section End -->
+
+
+{% endblock body %}
+{% block scripts %}{% endblock scripts %}
